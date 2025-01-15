@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import html2pdf from 'html2pdf.js'
+import { Link } from 'react-router-dom';
 
 export default function InputForm() {
     const [input, setInput] = useState('')
@@ -53,7 +54,9 @@ export default function InputForm() {
 
 
                     <div className='input-btn'>
-                        <button onClick={() => setIsPreviewed(true)}>Preview</button>
+                        <button onClick={() => setIsPreviewed(true)}>
+                            <Link to='/school' className='preview-link'>Preview</Link>
+                        </button>
                         <button onClick={handleClick}>Download</button>
                     </div>
                 </div>
